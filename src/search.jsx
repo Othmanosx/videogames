@@ -1,10 +1,11 @@
 import React from "react";
 import { Select } from "semantic-ui-react";
+import ArrowUpwardIcon from "@material-ui/icons/ArrowUpward";
 
 const countryOptions = [
-  { key: "af", value: "af", text: "Release Date" },
-  { key: "ax", value: "ax", text: "Score" },
-  { key: "al", value: "al", text: "Name" },
+  { key: "rd", value: "rd", text: "Release Date" },
+  { key: "sc", value: "sc", text: "Score" },
+  { key: "na", value: "na", text: "Name" },
 ];
 
 export default function search({
@@ -13,7 +14,6 @@ export default function search({
   score,
   scoreHandler,
   clear,
-  sort,
   sortHandler,
 }) {
   return (
@@ -41,11 +41,16 @@ export default function search({
         </div>
         <div className="select">
           <label>Order By</label>
-          <Select
-            onChange={(e) => sortHandler(e)}
-            style={{ width: "100%" }}
-            options={countryOptions}
-          />
+          <div style={{ display: "flex" }}>
+            <div style={{ backgroundColor: "#3e94ef", padding: "6px 9px" }}>
+              <ArrowUpwardIcon />
+            </div>
+            <Select
+              onChange={(e) => sortHandler(e)}
+              style={{ width: "100%" }}
+              options={countryOptions}
+            />
+          </div>
         </div>
         <div className="button">
           <br />
