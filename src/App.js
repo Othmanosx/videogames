@@ -27,11 +27,11 @@ function App() {
 
   useEffect(() => {
     setfiltered(results.filter(result => result.name.toLowerCase().includes(search.toLowerCase())))
-  }, [search]);
+  }, [search]);// eslint-disable-line react-hooks/exhaustive-deps
   useEffect(() => {
     setfiltered(filtered.filter(result => result.rating>=(score*10)))
 
-  }, [score]);
+  }, [score]);// eslint-disable-line react-hooks/exhaustive-deps
   
   const searchHandler = (e) =>{
     setSearch(e.target.value)
