@@ -1,38 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@500&display=swap");
+
+body {
+  display: block;
+  margin: 0;
+}
+
 .App {
-  text-align: center;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  background: linear-gradient(#081221, #03080f);
+  min-height: 975px;
+}
+h1,
+h2,
+label,
+button {
+  font-family: "Mulish", sans-serif;
+}
+.navbar {
+  padding: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 180px;
+  background-color: #081221;
+  z-index: 2;
+}
+.navbar ul {
+  display: flex;
+  margin: 90px;
+}
+.navbar ul li {
+  margin: 0 30px;
+  font-size: 27px;
+}
+input {
+  width: 100%;
+}
+.row {
+  display: grid;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  /* button {
+    flex-grow: 1;
+  } */
+}
+@media only screen and (max-width: 670px) {
+  /* For mobile phones: */
+
+  /* .row button,
+  input,
+  select {
+    flex-grow: 1;
+  } */
+}
+.card {
+  background: #0e1a2b;
+  color: #c1d1e8;
+  padding: 20px;
+  margin-bottom: 15px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Mulish", sans-serif;
+}
+.filter {
+  background: #0e1a2b;
+  height: fit-content;
+  padding: 20px;
+}
+.main {
+  margin-top: 180px;
+  margin-right: 120px;
+  margin-left: 120px;
+}
+.score {
+  margin: 35px 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media only screen and (max-width: 1280px) {
+  /* For mobile phones: */
+  .main {
+    margin-top: 180px;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  .row {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: flex-end; */
+  }
+  .score {
+    margin: 0 !important;
   }
 }
+button {
+  height: 38px;
+}
+.select {
+  width: auto;
+  z-index: 1;
+}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+@media only screen and (max-width: 671px) {
+  /* For mobile phones: */
+  .row {
+    display: flex;
+    flex-direction: column;
+  }
+  button,
+  .select,
+  .score {
+    width: 100%;
+  }
+  button {
+    margin-top: 15px !important;
+  }
+  .score {
+    margin: 35px 0 !important;
+  }
+}
+.active {
+  background-color: #c1d1e8;
+}
+.title {
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+}
+.summary {
+  font-family: "Mulish", sans-serif;
+  margin-top: 20px;
+}
+.rating {
+  background-color: #5692e8;
+  border-radius: 50%;
+  width: fit-content;
+  height: fit-content;
+  padding: 10px 12px;
+  color: white;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-family: "Montserrat", sans-serif;
+  margin: 25px;
+  font-size: 25px;
+}
+
+input {
+  background: #182c47;
+  border: 0;
+  padding: 9px;
+  height: 38px;
+  color: #c1d1e8;
+}
+input::placeholder {
+  color: #c1d1e8;
+}
+button {
+  background: #5692e8;
+  border: 0;
+  color: white;
+  padding: 10px 20px;
+  float: right;
+  cursor: pointer;
+}
+ul {
+  list-style-type: none;
+}
+
+.ui.selection.dropdown > .delete.icon,
+.ui.selection.dropdown > .dropdown.icon,
+.ui.selection.dropdown > .search.icon {
+  font-size: 22px;
+  margin: -32px !important;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.ui.selection.dropdown {
+  background: #182c47 !important;
+  border-radius: 0 !important;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.ui.selection.active.dropdown .menu {
+  background: #182c47 !important;
+}
+.ui.default.dropdown:not(.button) > .text,
+.ui.dropdown:not(.button) > .default.text {
+  color: #c1d1e8 !important;
+}
+::selection {
+  color: #c1d1e8 !important;
+}
+.ui.selection.dropdown .menu > .item {
+  border-top: 0 !important;
+}
+.ui.dropdown .menu > .item {
+  color: #c1d1e8 !important;
+}
+.ui.dropdown > .text,
+.ui.dropdown .menu > .item {
+  color: #c1d1e8 !important;
+}
+.ui.selection.active.dropdown,
+.ui.selection.active.dropdown .menu {
+  border: 0;
+}
+.ui.selection.dropdown:focus {
+  border: 0;
 }
