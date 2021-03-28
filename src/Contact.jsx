@@ -4,7 +4,7 @@ import Grid from "@material-ui/core/Grid";
 export default function Contact() {
   return (
     <form>
-      <Grid container spacing={2} xs={11} sm={6} md={5} lg={4}>
+      <Grid item xs={11} sm={6} md={5} lg={4}>
         <div className="text">
           <h1>GET IN TOUCH</h1>
           <p>
@@ -31,7 +31,6 @@ export default function Contact() {
             name="firstName"
             variant="outlined"
             required
-            fullWidth
             id="firstName"
             label="First Name"
             autoFocus
@@ -61,7 +60,7 @@ export default function Contact() {
           />
         </Grid>
         <Grid item xs={12}>
-          <button type="submit" fullWidth variant="contained">
+          <button type="submit" variant="contained">
             Send
           </button>
         </Grid>
