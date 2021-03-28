@@ -4,7 +4,7 @@ import Grid from "@material-ui/core/Grid";
 export default function Contact() {
   return (
     <form>
-      <Grid container spacing={2} xs={12} sm={6} md={5} lg={4}>
+      <Grid container spacing={2} xs={11} sm={6} md={5} lg={4}>
         <div className="text">
           <h1>GET IN TOUCH</h1>
           <p>
