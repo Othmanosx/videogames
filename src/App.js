@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import Results from './results'
 import Search from './search'
 import Navbar from './Navbar'
+import Contact from './Contact.jsx'
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Grid from '@material-ui/core/Grid';
 
@@ -31,9 +32,6 @@ function App() {
     setfiltered(filtered.filter(result => result.rating>=(score*10)))
 
   }, [score]);
-  useEffect(() => {
-    
-  }, [sort ,filtered]);
   
   const searchHandler = (e) =>{
     setSearch(e.target.value)
@@ -87,7 +85,7 @@ function App() {
         </Grid>
       </div>
       } />
-      <Route path="/contact" component={Search} />
+      <Route path="/contact" component={Contact} />
       </Switch>
       </BrowserRouter>
     </div>

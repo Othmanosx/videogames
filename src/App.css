@@ -5,7 +5,10 @@ body {
   display: block;
   margin: 0;
 }
-
+.link {
+  color: white;
+  width: 100%;
+}
 .App {
   color: #ffffff;
   font-family: "Montserrat", sans-serif;
@@ -15,7 +18,8 @@ body {
 h1,
 h2,
 label,
-button {
+button,
+p {
   font-family: "Mulish", sans-serif;
 }
 .navbar {
@@ -27,12 +31,31 @@ button {
   background-color: #081221;
   z-index: 2;
 }
+@media only screen and (max-width: 615px) {
+  .navbar {
+    height: 220px;
+  }
+  .navbar ul {
+    margin: 60px 0 !important;
+  }
+  .main {
+    margin-top: 220px !important;
+  }
+  .shadow1 {
+    left: 29px !important;
+  }
+  .shadow2 {
+    left: 29px !important;
+    top: 140px !important;
+  }
+}
 .navbar ul {
   display: flex;
-  margin: 90px;
+  margin: 60px;
+  flex-wrap: wrap;
 }
 .navbar ul li {
-  margin: 0 30px;
+  margin: 25px 30px;
   font-size: 27px;
 }
 input {
@@ -73,6 +96,28 @@ input {
   justify-content: space-between;
   align-items: center;
   font-family: "Mulish", sans-serif;
+}
+.contact-card {
+  background: #0e1a2b;
+  color: #c1d1e8;
+  padding: 20px;
+  font-family: "Mulish", sans-serif;
+}
+.shadow1 {
+  z-index: -1;
+  font-size: 60px;
+  position: absolute;
+  color: #112d49;
+  left: 122px;
+  top: 70px;
+}
+.shadow2 {
+  z-index: -1;
+  font-size: 60px;
+  position: absolute;
+  color: #112d49;
+  left: 377px;
+  top: 70px;
 }
 .filter {
   background: #0e1a2b;
@@ -130,8 +175,8 @@ button {
     margin: 35px 0 !important;
   }
 }
-.active {
-  background-color: #c1d1e8;
+.active-page {
+  background-image: none;
 }
 .title {
   color: #ffffff;
@@ -176,6 +221,9 @@ button {
 ul {
   list-style-type: none;
 }
+li {
+  color: white;
+}
 
 .ui.selection.dropdown > .delete.icon,
 .ui.selection.dropdown > .dropdown.icon,
@@ -214,4 +262,26 @@ ul {
 }
 .ui.selection.dropdown:focus {
   border: 0;
+}
+form {
+  padding-top: 250px;
+  text-align: -webkit-center;
+}
+form label {
+  text-align: left !important;
+}
+textarea {
+  width: 100%;
+  background: #182c47;
+  border: 0;
+  padding: 9px;
+  color: #c1d1e8;
+}
+.required:after {
+  content: " *";
+  color: #5692e8;
+}
+.text {
+  text-align: left;
+  margin-bottom: 30px;
 }
