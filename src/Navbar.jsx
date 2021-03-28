@@ -8,9 +8,9 @@ export default function Navbar() {
     <div className="navbar">
       <ul>
         <li>
-          <NavLink activeClassName="active-page" to="/videogames">
+          <NavLink activeClassName="active-page" to="/">
             <div onClick={setState}>
-              {window.location.pathname === "/videogames" ? (
+              {window.location.pathname === "/" ? (
                 <div className="shadow1">VIDEO</div>
               ) : null}
               <div className="link">VIDEO GAMES</div>

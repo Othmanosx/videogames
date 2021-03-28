@@ -71,7 +71,7 @@ function App() {
       <BrowserRouter>
       <Navbar />
       <Switch>
-      <Route path="/videogames" render={()=> 
+      <Route exact path="/" render={()=> 
       <div className='main'>
         <Grid container spacing={2} >
             <Grid item xs={12} lg={3}>
