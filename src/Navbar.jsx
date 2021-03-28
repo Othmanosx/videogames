@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 export default function Navbar() {
-  const [state, setState] = React.useState(false);
+  const [, setState] = React.useState(false);
 
   return (
     <div className="navbar">
